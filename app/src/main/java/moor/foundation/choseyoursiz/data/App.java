@@ -34,7 +34,7 @@ public class App extends Application {
         respNrz0111.classOfDefend = "FFP 1";
         respNrz0111.clapan = "Да";
         respNrz0111.construction = "Формованный";
-        respNrz0101.imageResource = R.drawable.nrz0111;
+        respNrz0111.imageResource = R.drawable.nrz0111;
         respiratorsDao.insert(respNrz0111);
 
         Respirators respNrz0113 = new Respirators();
@@ -42,7 +42,7 @@ public class App extends Application {
         respNrz0113.classOfDefend = "FFP 3";
         respNrz0113.clapan = "Да";
         respNrz0113.construction = "Формованный";
-        respNrz0101.imageResource = R.drawable.nrz0113;
+        respNrz0113.imageResource = R.drawable.nrz0113;
         respiratorsDao.insert(respNrz0113);
 
         Respirators spiro313 = new Respirators();
