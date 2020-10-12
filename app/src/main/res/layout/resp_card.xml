@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:padding="4dp"
+            android:id="@+id/respiratorImageView">
+        </ImageView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleTextView"
+            android:text="Название респиратора"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/respiratorImageView">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/defendTextViewText"
+            android:text="Класс защиты: "
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:layout_below="@id/titleTextView"
+            android:layout_toEndOf="@id/respiratorImageView">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/defendTextView"
+            android:text="Класс защиты"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:layout_below="@id/titleTextView"
+            android:layout_toEndOf="@id/defendTextViewText">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clapanTextViewText"
+            android:text="Клапан: "
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:layout_below="@id/defendTextView"
+            android:layout_toEndOf="@id/respiratorImageView">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clapanTextView"
+            android:text="Клапан"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:layout_below="@id/defendTextView"
+            android:layout_toEndOf="@id/clapanTextViewText">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/constructionTextViewText"
+            android:text="Конструкция: "
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:layout_below="@id/clapanTextView"
+            android:layout_toEndOf="@id/respiratorImageView">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/constructionTextView"
+            android:text="Конструкция"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:layout_below="@id/clapanTextView"
+            android:layout_toEndOf="@id/constructionTextViewText">
+
+        </TextView>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
