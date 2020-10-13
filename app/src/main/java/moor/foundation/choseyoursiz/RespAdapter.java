@@ -45,6 +45,7 @@ public class RespAdapter extends RecyclerView.Adapter<RespAdapter.RespViewHolder
      holder.classOfDefend.setText(respirators.getClassOfDefend());
      holder.imageResource.setImageResource(respirators.getImageResource());
 
+
     }
 
     @Override

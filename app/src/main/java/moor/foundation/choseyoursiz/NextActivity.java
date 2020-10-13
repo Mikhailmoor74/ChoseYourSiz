@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -54,6 +55,8 @@ public class NextActivity extends AppCompatActivity {
         List<Respirators> respItem = respiratorsDao.getAll();
 
 
+
+
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         adapter = new RespAdapter(respItem, this);
@@ -64,11 +67,30 @@ public class NextActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        String ffp1 = intent.getStringExtra("idButton");
+        boolean ffp1 = intent.getBooleanExtra("ffp1Pressed", false);
+        boolean ffp2 = intent.getBooleanExtra("ffp2Pressed", false);
+        boolean ffp3 = intent.getBooleanExtra("ffp3Pressed", false);
 
 
-        if (ffp1.equals("FFP 1")) {
-            respiratorsDao.getFFP1();
+        if (ffp1) {
+            List<Respirators> respItem2 = respiratorsDao.getFFP1();
+            adapter = new RespAdapter(respItem2, this);
+            recyclerView.setAdapter(adapter);
+
+        } else if (ffp2) {
+
+            List<Respirators> respItem2 = respiratorsDao.getFFP2();
+            adapter = new RespAdapter(respItem2, this);
+            recyclerView.setAdapter(adapter);
+
+        } else if (ffp3) {
+
+            List<Respirators> respItem2 = respiratorsDao.getFFP3();
+            adapter = new RespAdapter(respItem2, this);
+            recyclerView.setAdapter(adapter);
+
+        } else {
+            Toast.makeText(this, "Не получается", Toast.LENGTH_LONG).show();
         }
 
 

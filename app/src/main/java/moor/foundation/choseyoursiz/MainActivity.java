@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -45,19 +46,16 @@ public class MainActivity extends AppCompatActivity {
                 switch (v.getId()) {
 
                     case R.id.ffp2Button:
-                        ffp1Button.setEnabled(false);
-                        ffp3Button.setEnabled(false);
+                        ffp2Button.setEnabled(true);
                         ffp2Button.setBackgroundColor(Color.GRAY);
                         break;
                     case R.id.ffp1Button:
                         ffp1Button.setBackgroundColor(Color.GRAY);
-                        ffp2Button.setEnabled(false);
-                        ffp3Button.setEnabled(false);
+                        ffp1Button.setEnabled(true);
                         break;
 
                     case R.id.ffp3Button:
-                        ffp1Button.setEnabled(false);
-                        ffp2Button.setEnabled(false);
+                        ffp3Button.setEnabled(true);
                         ffp3Button.setBackgroundColor(Color.GRAY);
                         break;
                     default:
@@ -79,9 +77,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void startSearch(View view) {
 
+        if (ffp1Button.isEnabled() || ffp2Button.isEnabled() || ffp3Button.isEnabled()) {
+            Intent intent = new Intent(MainActivity.this, NextActivity.class);
+            intent.putExtra("ffp1Pressed", ffp1Button.isEnabled());
+            intent.putExtra("ffp2Pressed", ffp2Button.isEnabled());
+            intent.putExtra("ffp3Pressed", ffp3Button.isEnabled());
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Не получается", Toast.LENGTH_LONG).show();
+        }
 
-        Intent intent = new Intent(MainActivity.this, NextActivity.class);
-        intent.putExtra("idButton", ffp1Button.getText().toString());
-        startActivity(intent);
+
+
     }
 }

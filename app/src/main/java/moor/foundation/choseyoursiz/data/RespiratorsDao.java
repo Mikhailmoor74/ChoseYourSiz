@@ -18,6 +18,12 @@ public interface RespiratorsDao {
     @Query("SELECT * FROM Respirators WHERE classOfDefend = 'FFP 1'")
     List<Respirators> getFFP1();
 
+    @Query("SELECT * FROM Respirators WHERE classOfDefend = 'FFP 2'")
+    List<Respirators> getFFP2();
+
+    @Query("SELECT * FROM Respirators WHERE classOfDefend = 'FFP 3'")
+    List<Respirators> getFFP3();
+
     @Query("SELECT * FROM respirators WHERE id = :id")
     Respirators getById(long id);
 
