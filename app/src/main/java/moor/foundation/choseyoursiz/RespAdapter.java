@@ -45,7 +45,6 @@ public class RespAdapter extends RecyclerView.Adapter<RespAdapter.RespViewHolder
      holder.classOfDefend.setText(respirators.getClassOfDefend());
      holder.imageResource.setImageResource(respirators.getImageResource());
 
-
     }
 
     @Override
@@ -62,8 +61,6 @@ public class RespAdapter extends RecyclerView.Adapter<RespAdapter.RespViewHolder
         ImageView imageResource;
 
 
-
-
         public RespViewHolder(@NonNull View itemView) {
 
 
@@ -73,8 +70,6 @@ public class RespAdapter extends RecyclerView.Adapter<RespAdapter.RespViewHolder
             clapan = itemView.findViewById(R.id.clapanTextView);
             construction = itemView.findViewById(R.id.constructionTextView);
             imageResource = itemView.findViewById(R.id.respiratorImageView);
-
-
 
         }
 

@@ -72,8 +72,6 @@ public class MainActivity extends AppCompatActivity {
         ffp3Button.setOnClickListener(buttonClickListener);
 
 
-
-
     }
 
 
@@ -83,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Intent intent = new Intent(MainActivity.this, NextActivity.class);
+        intent.putExtra("idButton", ffp1Button.getText().toString());
         startActivity(intent);
     }
 }

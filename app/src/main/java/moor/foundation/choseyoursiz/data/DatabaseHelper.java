@@ -1,3 +1,4 @@
+/*
 package moor.foundation.choseyoursiz.data;
 
 
@@ -99,3 +100,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             mNeedUpdate = true;
     }
 }
+*/

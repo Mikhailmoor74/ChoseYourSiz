@@ -24,7 +24,7 @@ import java.util.List;
 
 import moor.foundation.choseyoursiz.data.App;
 import moor.foundation.choseyoursiz.data.Database;
-import moor.foundation.choseyoursiz.data.DatabaseHelper;
+/*import moor.foundation.choseyoursiz.data.DatabaseHelper;*/
 import moor.foundation.choseyoursiz.data.Respirators;
 import moor.foundation.choseyoursiz.data.RespiratorsDao;
 
@@ -37,8 +37,8 @@ public class NextActivity extends AppCompatActivity {
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
 
-    private DatabaseHelper mDBHelper;
-    private SQLiteDatabase mDb;
+    /*private DatabaseHelper mDBHelper;
+    private SQLiteDatabase mDb;*/
 
 
     @Override
@@ -62,10 +62,14 @@ public class NextActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
 
+        Intent intent = getIntent();
+
+        String ffp1 = intent.getStringExtra("idButton");
 
 
-
-
+        if (ffp1.equals("FFP 1")) {
+            respiratorsDao.getFFP1();
+        }
 
 
     }
