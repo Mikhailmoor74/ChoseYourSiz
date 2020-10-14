@@ -67,13 +67,13 @@ public class NextActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        boolean ffp1 = intent.getBooleanExtra("ffp1Pressed", false);
+        boolean ffp1 = intent.getBooleanExtra("comboOne", false);
         boolean ffp2 = intent.getBooleanExtra("ffp2Pressed", false);
         boolean ffp3 = intent.getBooleanExtra("ffp3Pressed", false);
 
 
         if (ffp1) {
-            List<Respirators> respItem2 = respiratorsDao.getFFP1();
+            List<Respirators> respItem2 = respiratorsDao.getYesClapan();
             adapter = new RespAdapter(respItem2, this);
             recyclerView.setAdapter(adapter);
 

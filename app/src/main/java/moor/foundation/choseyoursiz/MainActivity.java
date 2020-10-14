@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button ffp2Button;
     Button ffp3Button;
     Button noButton;
+    Button yesButton;
 
 
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         ffp1Button = findViewById(R.id.ffp1Button);
         ffp2Button = findViewById(R.id.ffp2Button);
         ffp3Button = findViewById(R.id.ffp3Button);
+        yesButton = findViewById(R.id.yesButton);
         noButton = findViewById(R.id.noButton);
 
 
@@ -58,26 +60,39 @@ public class MainActivity extends AppCompatActivity {
                         ffp3Button.setEnabled(true);
                         ffp3Button.setBackgroundColor(Color.GRAY);
                         break;
+                    case R.id.yesButton:
+                        yesButton.setEnabled(true);
+                        yesButton.setBackgroundColor(Color.GRAY);
+                        break;
+
                     default:
                         break;
 
                 }
+
             }
         };
 
         ffp1Button.setOnClickListener(buttonClickListener);
         ffp2Button.setOnClickListener(buttonClickListener);
         ffp3Button.setOnClickListener(buttonClickListener);
+        yesButton.setOnClickListener(buttonClickListener);
 
 
     }
 
 
-
-
     public void startSearch(View view) {
 
-        if (ffp1Button.isEnabled() || ffp2Button.isEnabled() || ffp3Button.isEnabled()) {
+        if (ffp1Button.isEnabled()) {
+            Intent intent = new Intent(MainActivity.this, NextActivity.class);
+            intent.putExtra("comboOne", ffp1Button.isEnabled());
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Не получается", Toast.LENGTH_LONG).show();
+        }
+
+        /*if (ffp1Button.isEnabled() || ffp2Button.isEnabled() || ffp3Button.isEnabled()) {
             Intent intent = new Intent(MainActivity.this, NextActivity.class);
             intent.putExtra("ffp1Pressed", ffp1Button.isEnabled());
             intent.putExtra("ffp2Pressed", ffp2Button.isEnabled());
@@ -85,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         } else {
             Toast.makeText(this, "Не получается", Toast.LENGTH_LONG).show();
-        }
+        }*/
 
 
 
