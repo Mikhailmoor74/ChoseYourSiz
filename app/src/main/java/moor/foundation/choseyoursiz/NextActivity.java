@@ -41,6 +41,8 @@ public class NextActivity extends AppCompatActivity {
     /*private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;*/
 
+    Database db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +75,7 @@ public class NextActivity extends AppCompatActivity {
 
 
         if (ffp1) {
-            List<Respirators> respItem2 = respiratorsDao.getYesClapan();
+            List<Respirators> respItem2 = respiratorsDao.getFFP1();
             adapter = new RespAdapter(respItem2, this);
             recyclerView.setAdapter(adapter);
 
