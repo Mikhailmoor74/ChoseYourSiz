@@ -54,22 +54,23 @@ public class NextActivity extends AppCompatActivity {
 
         RespiratorsDao respiratorsDao = db.respiratorsDao();
 
-        List<Respirators> respItem = respiratorsDao.getAll();
+//        List<Respirators> respItem = respiratorsDao.getAll();
 
 
 
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-        adapter = new RespAdapter(respItem, this);
+//        adapter = new RespAdapter(respItem, this);
         layoutManager = new LinearLayoutManager(this);
 
-        recyclerView.setAdapter(adapter);
+//        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
+
 
         Intent intent = getIntent();
 
-        boolean ffp1 = intent.getBooleanExtra("comboOne", false);
+        boolean ffp1 = intent.getBooleanExtra("comboOne", true);
         boolean ffp2 = intent.getBooleanExtra("ffp2Pressed", false);
         boolean ffp3 = intent.getBooleanExtra("ffp3Pressed", false);
 
@@ -78,21 +79,35 @@ public class NextActivity extends AppCompatActivity {
             List<Respirators> respItem2 = respiratorsDao.getFFP1();
             adapter = new RespAdapter(respItem2, this);
             recyclerView.setAdapter(adapter);
+            Toast.makeText(this, "Сработал метод ФФП1", Toast.LENGTH_LONG).show();
 
         } else if (ffp2) {
 
             List<Respirators> respItem2 = respiratorsDao.getFFP2();
             adapter = new RespAdapter(respItem2, this);
             recyclerView.setAdapter(adapter);
+            Toast.makeText(this, "Сработал метод ФФП2", Toast.LENGTH_LONG).show();
 
         } else if (ffp3) {
 
             List<Respirators> respItem2 = respiratorsDao.getFFP3();
             adapter = new RespAdapter(respItem2, this);
             recyclerView.setAdapter(adapter);
+            Toast.makeText(this, "Сработал метод ФФП3", Toast.LENGTH_LONG).show();
 
         } else {
             Toast.makeText(this, "Не получается", Toast.LENGTH_LONG).show();
+        }
+
+        Intent intent1 = getIntent();
+        boolean finalTest = intent1.getBooleanExtra("finalTest", true);
+
+        if (finalTest) {
+            List<Respirators> respItem = respiratorsDao.getAll();
+            adapter = new RespAdapter(respItem, this);
+            recyclerView.setAdapter(adapter);
+        } else {
+            Toast.makeText(this, "Не получается CУК", Toast.LENGTH_LONG).show();
         }
 
 

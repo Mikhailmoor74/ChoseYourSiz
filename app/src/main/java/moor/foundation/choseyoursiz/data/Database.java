@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.room.RoomDatabase;
 
-@androidx.room.Database(entities = {Respirators.class}, version = 2)
+@androidx.room.Database(entities = {Respirators.class}, version = 1)
 public abstract class Database extends RoomDatabase {
 
 

@@ -3,6 +3,8 @@ package moor.foundation.choseyoursiz.data;
 import android.app.Application;
 
 import androidx.room.Room;
+import androidx.room.migration.Migration;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import moor.foundation.choseyoursiz.R;
 
@@ -15,11 +17,13 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
         instance = this;
-        database = Room.databaseBuilder(this, Database.class, "respirators.db").allowMainThreadQueries().fallbackToDestructiveMigration()
-                .build();
+        database = Room.databaseBuilder(this, Database.class, "respirators.db").allowMainThreadQueries().build();
+
 
         RespiratorsDao respiratorsDao = database.respiratorsDao();
+        respiratorsDao.deleteAll();
 
         Respirators respNrz0101 = new Respirators();
         respNrz0101.title = "НРЗ-0101";

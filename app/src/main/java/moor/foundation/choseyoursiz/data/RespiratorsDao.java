@@ -24,6 +24,9 @@ public interface RespiratorsDao {
     @Query("SELECT * FROM Respirators WHERE classOfDefend = 'FFP 3'")
     List<Respirators> getFFP3();
 
+    @Query("DELETE FROM Respirators")
+    void deleteAll();
+
     @Query("SELECT * FROM Respirators WHERE classOfDefend = 'FFP 3' AND clapan = 'Да'")
     List<Respirators> getYesClapan();
 
