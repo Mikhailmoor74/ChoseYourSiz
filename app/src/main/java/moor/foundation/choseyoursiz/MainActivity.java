@@ -25,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button noButton;
     Button yesButton;
 
-
-
+    int flag;
 
 
     @Override
@@ -84,25 +83,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void startSearch(View view) {
 
+
+        Intent intent = new Intent(MainActivity.this, NextActivity.class);
+
         if (ffp1Button.isEnabled()) {
-            Intent intent = new Intent(MainActivity.this, NextActivity.class);
-            intent.putExtra("comboOne", ffp1Button.isEnabled());
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Не получается", Toast.LENGTH_LONG).show();
+            intent.putExtra("ffp1", 1);
+        } else if (ffp2Button.isEnabled()) {
+            intent.putExtra("ffp2", 1);
+        } else if (ffp3Button.isEnabled()) {
+            intent.putExtra("ffp3", 1);
         }
-
-        /*if (ffp1Button.isEnabled() || ffp2Button.isEnabled() || ffp3Button.isEnabled()) {
-            Intent intent = new Intent(MainActivity.this, NextActivity.class);
-            intent.putExtra("ffp1Pressed", ffp1Button.isEnabled());
-            intent.putExtra("ffp2Pressed", ffp2Button.isEnabled());
-            intent.putExtra("ffp3Pressed", ffp3Button.isEnabled());
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Не получается", Toast.LENGTH_LONG).show();
-        }*/
-
-
+        startActivity(intent);
 
     }
 
