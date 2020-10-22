@@ -143,7 +143,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/skladnoi"
+            android:id="@+id/skladnoiButton"
             android:text="Складной"
             android:layout_gravity="center_horizontal">
 
@@ -152,7 +152,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/formovoi"
+            android:id="@+id/formovoiButton"
             android:text="Формованный"
             android:layout_gravity="center_horizontal">
 
@@ -161,7 +161,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/neformovoi"
+            android:id="@+id/neformovoiButton"
             android:text="Неформованный"
             android:layout_gravity="center_horizontal">
 

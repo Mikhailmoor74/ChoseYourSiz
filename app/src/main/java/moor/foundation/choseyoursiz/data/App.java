@@ -49,6 +49,14 @@ public class App extends Application {
         respNrz0113.imageResource = R.drawable.nrz0113;
         respiratorsDao.insert(respNrz0113);
 
+        Respirators respNrz0102 = new Respirators();
+        respNrz0102.title = "НРЗ-0102";
+        respNrz0102.classOfDefend = "FFP 2";
+        respNrz0102.clapan = "Нет";
+        respNrz0102.construction = "Формованный";
+        respNrz0102.imageResource = R.drawable.nrz0113; // поменять картинку
+        respiratorsDao.insert(respNrz0102);
+
         Respirators spiro313 = new Respirators();
         spiro313.title = "Спиро-313";
         spiro313.classOfDefend = "FFP 3";

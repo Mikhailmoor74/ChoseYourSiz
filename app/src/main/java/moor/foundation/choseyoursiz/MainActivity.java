@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     Button noButton;
     Button yesButton;
     Button searchButton;
+    Button skladnoiButton;
+    Button formButton;
+    Button notFormButton;
 
     int flag;
 
@@ -41,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         yesButton = findViewById(R.id.yesButton);
         noButton = findViewById(R.id.noButton);
         searchButton = findViewById(R.id.searchButton);
+        skladnoiButton = findViewById(R.id.skladnoiButton);
+        formButton = findViewById(R.id.formovoiButton);
+        notFormButton = findViewById(R.id.neformovoiButton);
 
 
         final Intent intent = new Intent(MainActivity.this, NextActivity.class);
@@ -78,7 +84,32 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.yesButton:
                         yesButton.setEnabled(true);
+                        noButton.setEnabled(false);
+                        intent.putExtra("yesClapan", 4);
+                        intent.putExtra("noClapan",0);
                         break;
+                    case R.id.noButton:
+                        noButton.setEnabled(true);
+                        yesButton.setEnabled(false);
+                        intent.putExtra("noClapan", 5);
+                        intent.putExtra("yesClapan",0);
+                        break;
+                    case R.id.skladnoiButton:
+                        skladnoiButton.setEnabled(true);
+                        formButton.setEnabled(false);
+                        notFormButton.setEnabled(false);
+                        break;
+                    case R.id.formovoiButton:
+                        formButton.setEnabled(true);
+                        skladnoiButton.setEnabled(false);
+                        notFormButton.setEnabled(false);
+                        intent.putExtra("form", 7);
+                        break;
+                    case R.id.neformovoiButton:
+                        notFormButton.setEnabled(true);
+                        skladnoiButton.setEnabled(false);
+                        formButton.setEnabled(false);
+
                     case R.id.searchButton:
                         startActivity(intent);
 
@@ -94,6 +125,10 @@ public class MainActivity extends AppCompatActivity {
         ffp2Button.setOnClickListener(buttonClickListener);
         ffp3Button.setOnClickListener(buttonClickListener);
         yesButton.setOnClickListener(buttonClickListener);
+        noButton.setOnClickListener(buttonClickListener);
+        skladnoiButton.setOnClickListener(buttonClickListener);
+        formButton.setOnClickListener(buttonClickListener);
+        notFormButton.setOnClickListener(buttonClickListener);
         searchButton.setOnClickListener(buttonClickListener);
 
 
@@ -104,5 +139,10 @@ public class MainActivity extends AppCompatActivity {
         ffp1Button.setEnabled(true);
         ffp2Button.setEnabled(true);
         ffp3Button.setEnabled(true);
+        yesButton.setEnabled(true);
+        noButton.setEnabled(true);
+        skladnoiButton.setEnabled(true);
+        formButton.setEnabled(true);
+        notFormButton.setEnabled(true);
     }
 }
