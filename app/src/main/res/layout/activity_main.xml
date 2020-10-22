@@ -181,9 +181,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/search_button"
+            android:id="@+id/searchButton"
             android:text="Поиск"
-            android:onClick="startSearch"
             android:layout_gravity="center_horizontal">
 
         </Button>
@@ -192,7 +191,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/testing_button"
-            android:text="Test"
+            android:text="Сброс"
             android:onClick="startTest"
             android:layout_gravity="center_horizontal">
 

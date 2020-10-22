@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Button ffp3Button;
     Button noButton;
     Button yesButton;
+    Button searchButton;
 
     int flag;
 
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         ffp3Button = findViewById(R.id.ffp3Button);
         yesButton = findViewById(R.id.yesButton);
         noButton = findViewById(R.id.noButton);
+        searchButton = findViewById(R.id.searchButton);
+
+
+        final Intent intent = new Intent(MainActivity.this, NextActivity.class);
 
 
         View.OnClickListener buttonClickListener = new View.OnClickListener() {
@@ -46,23 +51,36 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()) {
 
+                    case R.id.ffp1Button:
+                        ffp1Button.setEnabled(true);
+                        ffp2Button.setEnabled(false);
+                        ffp3Button.setEnabled(false);
+                        intent.putExtra("ffp1", 1);
+                        intent.putExtra("ffp2", 0);
+                        intent.putExtra("ffp3", 0);
+                        break;
                     case R.id.ffp2Button:
                         ffp2Button.setEnabled(true);
-                        ffp2Button.setBackgroundColor(Color.GRAY);
-                        break;
-                    case R.id.ffp1Button:
-                        ffp1Button.setBackgroundColor(Color.GRAY);
-                        ffp1Button.setEnabled(true);
+                        ffp1Button.setEnabled(false);
+                        ffp3Button.setEnabled(false);
+                        intent.putExtra("ffp2", 2);
+                        intent.putExtra("ffp1", 0);
+                        intent.putExtra("ffp3", 0);
                         break;
 
                     case R.id.ffp3Button:
                         ffp3Button.setEnabled(true);
-                        ffp3Button.setBackgroundColor(Color.GRAY);
+                        ffp1Button.setEnabled(false);
+                        ffp2Button.setEnabled(false);
+                        intent.putExtra("ffp3", 3);
+                        intent.putExtra("ffp2", 0);
+                        intent.putExtra("ffp1", 0);
                         break;
                     case R.id.yesButton:
                         yesButton.setEnabled(true);
-                        yesButton.setBackgroundColor(Color.GRAY);
                         break;
+                    case R.id.searchButton:
+                        startActivity(intent);
 
                     default:
                         break;
@@ -76,47 +94,15 @@ public class MainActivity extends AppCompatActivity {
         ffp2Button.setOnClickListener(buttonClickListener);
         ffp3Button.setOnClickListener(buttonClickListener);
         yesButton.setOnClickListener(buttonClickListener);
+        searchButton.setOnClickListener(buttonClickListener);
 
 
     }
 
-
-    public void startSearch(View view) {
-
-
-        Intent intent = new Intent(MainActivity.this, NextActivity.class);
-
-        switch (view.getId()) {
-            case R.id.ffp1Button:
-                ffp1Button.setEnabled(true);
-                intent.putExtra("ffp1", ffp1Button.getText());
-                break;
-            case R.id.ffp2Button:
-                ffp2Button.setEnabled(true);
-                intent.putExtra("ffp2", ffp2Button.getText());
-        }
-
-
-        if (ffp1Button.isEnabled()) {
-            intent.putExtra("ffp1", 1);
-            Toast.makeText(this, "Вставилось значение 1", Toast.LENGTH_LONG).show();
-        } else if (ffp2Button.isEnabled()) {
-            intent.putExtra("ffp2", 2);
-            Toast.makeText(this, "Вставилось значение 2", Toast.LENGTH_LONG).show();
-        } else if (ffp3Button.isEnabled()) {
-            intent.putExtra("ffp3", 3);
-            Toast.makeText(this, "Вставилось значение 3", Toast.LENGTH_LONG).show();
-        }
-        startActivity(intent);
-
-        if (ffp1Button.isEnabled() || ffp2Button.isEnabled() || ffp3Button.isEnabled()) {
-            intent.putExtra("ffp1", ffp1Button.getText());
-        }
-
-    }
 
     public void startTest(View view) {
-        Intent intent = new Intent(MainActivity.this, NextActivity.class);
-        startActivity(intent);
+        ffp1Button.setEnabled(true);
+        ffp2Button.setEnabled(true);
+        ffp3Button.setEnabled(true);
     }
 }

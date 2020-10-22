@@ -73,11 +73,15 @@ public class NextActivity extends AppCompatActivity {
         int ffp2 = getIntent().getIntExtra("ffp2", 0);
         int ffp3 = getIntent().getIntExtra("ffp3", 0);
 
+
+
+
         if (ffp1 == 1) {
             List<Respirators> respItem2 = respiratorsDao.getFFP1();
             adapter = new RespAdapter(respItem2, this);
             recyclerView.setAdapter(adapter);
             Toast.makeText(this, "Сработал метод ФФП1", Toast.LENGTH_LONG).show();
+
         } else if (ffp2 == 2) {
             List<Respirators> respItem2 = respiratorsDao.getFFP2();
             adapter = new RespAdapter(respItem2, this);
@@ -97,4 +101,5 @@ public class NextActivity extends AppCompatActivity {
 
 
     }
+
 }
