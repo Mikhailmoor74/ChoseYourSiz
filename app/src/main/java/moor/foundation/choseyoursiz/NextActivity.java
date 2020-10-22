@@ -78,12 +78,12 @@ public class NextActivity extends AppCompatActivity {
             adapter = new RespAdapter(respItem2, this);
             recyclerView.setAdapter(adapter);
             Toast.makeText(this, "Сработал метод ФФП1", Toast.LENGTH_LONG).show();
-        } else if (ffp2 == 1) {
+        } else if (ffp2 == 2) {
             List<Respirators> respItem2 = respiratorsDao.getFFP2();
             adapter = new RespAdapter(respItem2, this);
             recyclerView.setAdapter(adapter);
             Toast.makeText(this, "Сработал метод ФФП2", Toast.LENGTH_LONG).show();
-        } else if (ffp3 == 1) {
+        } else if (ffp3 == 3) {
             List<Respirators> respItem2 = respiratorsDao.getFFP3();
             adapter = new RespAdapter(respItem2, this);
             recyclerView.setAdapter(adapter);

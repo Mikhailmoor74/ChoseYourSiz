@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
                     default:
                         break;
-
                 }
+
 
             }
         };
@@ -86,14 +86,32 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(MainActivity.this, NextActivity.class);
 
+        switch (view.getId()) {
+            case R.id.ffp1Button:
+                ffp1Button.setEnabled(true);
+                intent.putExtra("ffp1", ffp1Button.getText());
+                break;
+            case R.id.ffp2Button:
+                ffp2Button.setEnabled(true);
+                intent.putExtra("ffp2", ffp2Button.getText());
+        }
+
+
         if (ffp1Button.isEnabled()) {
             intent.putExtra("ffp1", 1);
+            Toast.makeText(this, "Вставилось значение 1", Toast.LENGTH_LONG).show();
         } else if (ffp2Button.isEnabled()) {
-            intent.putExtra("ffp2", 1);
+            intent.putExtra("ffp2", 2);
+            Toast.makeText(this, "Вставилось значение 2", Toast.LENGTH_LONG).show();
         } else if (ffp3Button.isEnabled()) {
-            intent.putExtra("ffp3", 1);
+            intent.putExtra("ffp3", 3);
+            Toast.makeText(this, "Вставилось значение 3", Toast.LENGTH_LONG).show();
         }
         startActivity(intent);
+
+        if (ffp1Button.isEnabled() || ffp2Button.isEnabled() || ffp3Button.isEnabled()) {
+            intent.putExtra("ffp1", ffp1Button.getText());
+        }
 
     }
 
