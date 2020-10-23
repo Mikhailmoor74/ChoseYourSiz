@@ -33,6 +33,9 @@ public interface RespiratorsDao {
     @Query("SELECT * FROM Respirators WHERE classOfDefend = 'FFP 1' AND clapan = 'Да' AND construction = 'Формованный'")
     List<Respirators> getFFP1YesClapanForm();
 
+    @Query("SELECT * FROM Respirators WHERE classOfDefend = 'FFP 1' AND clapan = 'Нет' AND construction = 'Формованный'")
+    List<Respirators> getFFP1NoClapanForm();
+
     @Query("SELECT * FROM Respirators WHERE classOfDefend = 'FFP 1' AND clapan = 'Нет'")
     List<Respirators> getFFP1NoClapan();
 

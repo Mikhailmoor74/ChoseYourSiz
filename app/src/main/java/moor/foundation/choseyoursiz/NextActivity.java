@@ -54,7 +54,7 @@ public class NextActivity extends AppCompatActivity {
 
         RespiratorsDao respiratorsDao = db.respiratorsDao();
 
-//        List<Respirators> respItem = respiratorsDao.getAll();
+  //    List<Respirators> respItem = respiratorsDao.getAll();
 
 
 
@@ -77,9 +77,35 @@ public class NextActivity extends AppCompatActivity {
         int form = getIntent().getIntExtra("form",0);
 
 
+        int ffp1final = ffp1 + yesClapan + form;
 
 
-        if (ffp1 == 1) {
+
+        if (ffp1final == 12) {
+            List<Respirators> respItem2 = respiratorsDao.getFFP1YesClapanForm();
+            adapter = new RespAdapter(respItem2, this);
+            recyclerView.setAdapter(adapter);
+            Toast.makeText(this, "Сработал метод ФФП1+Да+форм", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (ffp1final == 5) {
+            List<Respirators> respItem = respiratorsDao.getFFP1YesClapan();
+            adapter = new RespAdapter(respItem, this);
+            recyclerView.setAdapter(adapter);
+            Toast.makeText(this, "Сработал метод ФФП1+ДА", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (ffp1final == 1) {
+            List<Respirators> respItem = respiratorsDao.getFFP1();
+            adapter = new RespAdapter(respItem, this);
+            recyclerView.setAdapter(adapter);
+            Toast.makeText(this, "Сработал метод ФФП1", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+
+
+       /* if (ffp1 == 1) {
             List<Respirators> respItem2 = respiratorsDao.getFFP1();
             adapter = new RespAdapter(respItem2, this);
             recyclerView.setAdapter(adapter);
@@ -118,7 +144,7 @@ public class NextActivity extends AppCompatActivity {
             adapter = new RespAdapter(respItem, this);
             recyclerView.setAdapter(adapter);
             Toast.makeText(this, "Ничего не сработало, нубасище", Toast.LENGTH_SHORT).show();
-        }
+        }*/
 
 
     }
