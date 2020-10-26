@@ -69,30 +69,30 @@ public class MainActivity extends AppCompatActivity {
                         ffp2Button.setEnabled(true);
                         ffp1Button.setEnabled(false);
                         ffp3Button.setEnabled(false);
-                        intent.putExtra("ffp2", 2);
+                        /*intent.putExtra("ffp2", 2);
                         intent.putExtra("ffp1", 0);
-                        intent.putExtra("ffp3", 0);
+                        intent.putExtra("ffp3", 0);*/
                         break;
 
                     case R.id.ffp3Button:
                         ffp3Button.setEnabled(true);
                         ffp1Button.setEnabled(false);
                         ffp2Button.setEnabled(false);
-                        intent.putExtra("ffp3", 3);
+                        /*intent.putExtra("ffp3", 3);
                         intent.putExtra("ffp2", 0);
-                        intent.putExtra("ffp1", 0);
+                        intent.putExtra("ffp1", 0);*/
                         break;
                     case R.id.yesButton:
                         yesButton.setEnabled(true);
                         noButton.setEnabled(false);
-                        intent.putExtra("yesClapan", 4);
-                        intent.putExtra("noClapan",0);
+                        /*intent.putExtra("yesClapan", 4);
+                        intent.putExtra("noClapan",0);*/
                         break;
                     case R.id.noButton:
                         noButton.setEnabled(true);
                         yesButton.setEnabled(false);
-                        intent.putExtra("noClapan", 5);
-                        intent.putExtra("yesClapan",0);
+                        /*intent.putExtra("noClapan", 5);
+                        intent.putExtra("yesClapan",0);*/
                         break;
                     case R.id.skladnoiButton:
                         skladnoiButton.setEnabled(true);
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         formButton.setEnabled(true);
                         skladnoiButton.setEnabled(false);
                         notFormButton.setEnabled(false);
-                        intent.putExtra("form", 7);
+                       // intent.putExtra("form", 7);
                         break;
                     case R.id.neformovoiButton:
                         notFormButton.setEnabled(true);
@@ -136,13 +136,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void startTest(View view) {
-        ffp1Button.setEnabled(true);
+        /*ffp1Button.setEnabled(true);
         ffp2Button.setEnabled(true);
         ffp3Button.setEnabled(true);
         yesButton.setEnabled(true);
         noButton.setEnabled(true);
         skladnoiButton.setEnabled(true);
         formButton.setEnabled(true);
-        notFormButton.setEnabled(true);
+        notFormButton.setEnabled(true);*/
+        recreate();
     }
 }

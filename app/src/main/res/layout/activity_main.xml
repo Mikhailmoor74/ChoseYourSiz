@@ -183,6 +183,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/searchButton"
             android:text="Поиск"
+            android:onClick="searchNewButton"
             android:layout_gravity="center_horizontal">
 
         </Button>
