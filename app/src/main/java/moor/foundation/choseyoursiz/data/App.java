@@ -78,6 +78,13 @@ public class App extends Application {
         spiro212.construction = "Складной";
         respiratorsDao.insert(spiro212);
 
+        Respirators spiro312 = new Respirators();
+        spiro312.title = "Спиро-312";
+        spiro312.classOfDefend = "FFP 2";
+        spiro312.clapan = "Да";
+        spiro312.construction = "Формованный";
+        respiratorsDao.insert(spiro312);
+
 
     }
 

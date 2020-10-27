@@ -58,49 +58,63 @@ public class NextActivity extends AppCompatActivity {
 
 
 
-        /*int ffp1 = getIntent().getIntExtra("ffp1", 0);
+        int ffp1 = getIntent().getIntExtra("ffp1", 0);
         int ffp2 = getIntent().getIntExtra("ffp2", 0);
         int ffp3 = getIntent().getIntExtra("ffp3", 0);
         int yesClapan = getIntent().getIntExtra("yesClapan", 0);
         int noClapan = getIntent().getIntExtra("noClapan", 0);
         int form = getIntent().getIntExtra("form", 0);
 
-        if (ffp1 == 1 & yesClapan == 4 & form == 7) {
-                    List<Respirators> respItem3 = respiratorsDao.getFFP1YesClapanForm();
-                    adapter = new RespAdapter(respItem3, this);
-                    recyclerView.setAdapter(adapter);
-                    Toast.makeText(this, "Сработал метод ФФП1 и Клапан Да и ФОРМ", Toast.LENGTH_SHORT).show();
-        } else
 
-        if (ffp1 == 1 & yesClapan == 4) {
-            List<Respirators> respItem3 = respiratorsDao.getFFP1YesClapan();
-            adapter = new RespAdapter(respItem3, this);
-            recyclerView.setAdapter(adapter);
-            Toast.makeText(this, "Сработал метод ФФП1 и Клапан Да", Toast.LENGTH_SHORT).show();
-        } else
 
-        if (ffp1 == 1) {
-            List<Respirators> respItem2 = respiratorsDao.getFFP1();
-            adapter = new RespAdapter(respItem2, this);
-            recyclerView.setAdapter(adapter);
-            Toast.makeText(this, "Сработал метод ФФП1", Toast.LENGTH_SHORT).show();
-        }*/
-
-        int ffp1YesForm = getIntent().getIntExtra("ffp1YesForm", 0);
-        int ffp1Yes = getIntent().getIntExtra("ffp1Yes",0);
-
-        if (ffp1YesForm == 111) {
-            List<Respirators> respItem3 = respiratorsDao.getFFP1YesClapanForm();
-            adapter = new RespAdapter(respItem3, this);
-            recyclerView.setAdapter(adapter);
-            Toast.makeText(this, "Сработал метод ФФП1 и Клапан Да и ФОРМ", Toast.LENGTH_SHORT).show();
-        } else
-            if (ffp1Yes == 222) {
+        /*switch (ffp1 + yesClapan + form) {
+            case 1:
+                List<Respirators> respItem2 = respiratorsDao.getFFP1();
+                adapter = new RespAdapter(respItem2, this);
+                recyclerView.setAdapter(adapter);
+                Toast.makeText(this, "Сработал метод ФФП1", Toast.LENGTH_SHORT).show();
+                break;
+            case 5:
                 List<Respirators> respItem3 = respiratorsDao.getFFP1YesClapan();
                 adapter = new RespAdapter(respItem3, this);
                 recyclerView.setAdapter(adapter);
                 Toast.makeText(this, "Сработал метод ФФП1 и Клапан Да", Toast.LENGTH_SHORT).show();
-            }
+                break;
+            case 12:
+                List<Respirators> respItem4 = respiratorsDao.getFFP1YesClapanForm();
+                adapter = new RespAdapter(respItem4, this);
+                recyclerView.setAdapter(adapter);
+                Toast.makeText(this, "Сработал метод ФФП1 и Клапан Да и ФОРМ", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+
+        }
+
+        switch (ffp2 + yesClapan + form) {
+            case 2:
+                List<Respirators> respItem5 = respiratorsDao.getFFP2();
+                adapter = new RespAdapter(respItem5, this);
+                recyclerView.setAdapter(adapter);
+                Toast.makeText(this, "Сработал метод ФФП2", Toast.LENGTH_SHORT).show();
+                break;
+            case 6:
+                List<Respirators> respItem6 = respiratorsDao.getFFP2YesClapan();
+                adapter = new RespAdapter(respItem6, this);
+                recyclerView.setAdapter(adapter);
+                Toast.makeText(this, "Сработал метод ФФП2 и Клапан ДА", Toast.LENGTH_SHORT).show();
+                break;
+            case 13:
+                List<Respirators> respItem7 = respiratorsDao.getFFP2YesClapanForm();
+                adapter = new RespAdapter(respItem7, this);
+                recyclerView.setAdapter(adapter);
+                Toast.makeText(this, "Сработал метод ФФП2 и Клапан ДА и ФОРМ", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+
+
+        }*/
 
 
     }
