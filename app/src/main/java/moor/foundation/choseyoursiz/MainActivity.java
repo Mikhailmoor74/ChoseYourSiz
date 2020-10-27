@@ -85,20 +85,20 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.yesButton:
                         yesButton.setEnabled(true);
                         noButton.setEnabled(false);
-                        intent.putExtra("yesClapan", 4);
+                        intent.putExtra("yesClapan", 40);
                         intent.putExtra("noClapan",0);
                         break;
                     case R.id.noButton:
                         noButton.setEnabled(true);
                         yesButton.setEnabled(false);
-                        intent.putExtra("noClapan", 5);
+                        intent.putExtra("noClapan", 50);
                         intent.putExtra("yesClapan",0);
                         break;
                     case R.id.skladnoiButton:
                         skladnoiButton.setEnabled(true);
                         formButton.setEnabled(false);
                         notFormButton.setEnabled(false);
-                        intent.putExtra("skladnoi", 6);
+                        intent.putExtra("skladnoi", 100);
                         intent.putExtra("form", 0);
                         intent.putExtra("notform", 0);
                         break;
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                         formButton.setEnabled(true);
                         skladnoiButton.setEnabled(false);
                         notFormButton.setEnabled(false);
-                        intent.putExtra("form", 7);
+                        intent.putExtra("form", 200);
                         intent.putExtra("notform", 0);
                         intent.putExtra("skladnoi", 0);
                         break;
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                         notFormButton.setEnabled(true);
                         skladnoiButton.setEnabled(false);
                         formButton.setEnabled(false);
-                        intent.putExtra("notform", 8);
+                        intent.putExtra("notform", 300);
                         intent.putExtra("skladnoi", 0);
                         intent.putExtra("form", 0);
 
@@ -152,6 +152,8 @@ public class MainActivity extends AppCompatActivity {
         skladnoiButton.setEnabled(true);
         formButton.setEnabled(true);
         notFormButton.setEnabled(true);*/
+
         recreate();
+
     }
 }

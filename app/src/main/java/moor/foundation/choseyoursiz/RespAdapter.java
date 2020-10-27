@@ -1,6 +1,7 @@
 package moor.foundation.choseyoursiz;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,6 +67,7 @@ public class RespAdapter extends RecyclerView.Adapter<RespAdapter.RespViewHolder
 
 
             super(itemView);
+            itemView.setOnClickListener(this);
             titleTextView = itemView.findViewById(R.id.titleTextView);
             classOfDefend = itemView.findViewById(R.id.defendTextView);
             clapan = itemView.findViewById(R.id.clapanTextView);
@@ -76,6 +78,18 @@ public class RespAdapter extends RecyclerView.Adapter<RespAdapter.RespViewHolder
 
         @Override
         public void onClick(View v) {
+            int position = getAdapterPosition();
+            Respirators respirators = respItem.get(position);
+
+            Intent intent = new Intent(context, CardAcivity.class);
+            intent.putExtra("title", respirators.getTitle());
+            intent.putExtra("classofdefend", respirators.getClassOfDefend());
+            intent.putExtra("clapan", respirators.getClapan());
+            intent.putExtra("construction", respirators.getConstruction());
+            intent.putExtra("image", respirators.getImageResource());
+            intent.putExtra("description", respirators.getDescription());
+            context.startActivity(intent);
+
 
         }
     }
