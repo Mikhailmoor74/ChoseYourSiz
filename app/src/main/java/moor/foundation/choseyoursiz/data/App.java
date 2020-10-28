@@ -24,6 +24,7 @@ public class App extends Application {
 
         RespiratorsDao respiratorsDao = database.respiratorsDao();
         respiratorsDao.deleteAll();
+        Utils utils = new Utils();
 
         // Респираторы НРЗ
         Respirators respNrz0101 = new Respirators();
@@ -32,20 +33,7 @@ public class App extends Application {
         respNrz0101.clapan = "Нет";
         respNrz0101.construction = "Формованный";
         respNrz0101.imageResource = R.drawable.nrz0101;
-        respNrz0101.description = "Основные характеристики\n" +
-                "\n" +
-                "Фильтрующие полумаски дополнительно можно оснастить регулировкой натяжения ремней оголовья;\n" +
-                "Обеспечивает надежную защиту органов дыхания от аэрозолей (пыль, дым, тумана) концентрацией до 4 ПДК;\n" +
-                "Удобная чашеобразная форма позволяет респиратору плотно прилегать по всей поверхности;\n" +
-                "Респиратор НРЗ-0101 подходит для большинства типов лица.\n" +
-                "Фильтрующий материал обладает механической и электростатической фильтрацией, обеспечивающий легкость дыхания;\n" +
-                "Внутренний слой состоит из гипоаллергенного материала, не вызывает аллергических реакций;\n" +
-                "Используется при работе в пониженных, повышенных температурах, а также при повышенной влажности;" +
-                "Область применения\n" +
-                "\n" +
-                "Металлургическая промышленность, цементная промышленность, чугунно- и сталелитейное производство, механическая переработка руды,\n " +
-                "горнодобывающая промышленность, машиностроение, нефтехимия, целлюлозно-бумажная промышленность, строительство, судостроение, \n" +
-                " сельское хозяйство, производство красителей, фармацевтика, пищевая отрасль, гончарное дело и др.  ";
+        respNrz0101.description = utils.RESP_NRZ_0101;
         respiratorsDao.insert(respNrz0101);
 
         Respirators respNrz0111 = new Respirators();
@@ -54,6 +42,7 @@ public class App extends Application {
         respNrz0111.clapan = "Да";
         respNrz0111.construction = "Формованный";
         respNrz0111.imageResource = R.drawable.nrz0111;
+        respNrz0111.description = utils.RESP_NRZ_0111;
         respiratorsDao.insert(respNrz0111);
 
         Respirators respNrz0113 = new Respirators();
