@@ -12,13 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:id="@+id/titleLine">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Выбери свой респиратор">
+        android:id="@+id/titleLine"
+        android:orientation="horizontal">
 
-        </TextView>
     </LinearLayout>
 
     <LinearLayout
@@ -51,7 +47,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="4dp"
-            style="@style/Buttons"
             android:text="FFP1">
 
         </Button>
@@ -62,7 +57,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="4dp"
-            style="@style/Buttons"
             android:text="FFP2">
 
         </Button>
@@ -72,7 +66,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            style="@style/Buttons"
             android:text="FFP3">
 
         </Button>
@@ -108,7 +101,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="2dp"
-            style="@style/AnotherButtons"
             android:text="Имеется">
 
         </Button>
@@ -119,7 +111,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="2dp"
-            style="@style/AnotherButtons"
             android:text="Отсутствует">
 
         </Button>
@@ -157,7 +148,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            style="@style/AnotherButtonsTwo"
             android:text="Складной">
 
         </Button>
@@ -167,7 +157,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            style="@style/AnotherButtonsThree"
             android:text="Формованный">
 
         </Button>
@@ -177,7 +166,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            style="@style/AnotherButtonsFour"
             android:text="Неформованный">
 
         </Button>
@@ -197,7 +185,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             android:text="Поиск">
 
         </Button>
