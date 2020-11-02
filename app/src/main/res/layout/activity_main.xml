@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundmainactivity"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -31,17 +32,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Выбери класс защиты">
+            android:text="Класс защиты">
 
         </TextView>
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/defendButtonsLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/defendButtonsLine"
         android:layout_below="@id/defendClassLine"
+        android:layout_marginTop="48dp"
         android:padding="5dp">
 
         <Button
@@ -49,23 +50,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            style="@style/Buttons"
             android:text="FFP1">
 
         </Button>
 
         <Button
+            android:id="@+id/ffp2Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ffp2Button"
             android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            style="@style/Buttons"
             android:text="FFP2">
 
         </Button>
+
         <Button
+            android:id="@+id/ffp3Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ffp3Button"
             android:layout_weight="1"
+            style="@style/Buttons"
             android:text="FFP3">
 
         </Button>
@@ -88,27 +95,31 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/clapanButtonsLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/clapanButtonsLine"
         android:layout_below="@id/clapanLine"
+        android:layout_marginTop="41dp"
         android:padding="5dp">
 
         <Button
+            android:id="@+id/yesButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/yesButton"
+            android:layout_marginEnd="2dp"
+            style="@style/AnotherButtons"
             android:text="Имеется">
 
         </Button>
 
         <Button
+            android:id="@+id/noButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/noButton"
+            android:layout_marginStart="2dp"
+            style="@style/AnotherButtons"
             android:text="Отсутствует">
 
         </Button>
@@ -133,68 +144,71 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/constructionButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/constructionButtons"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/constructionLine"
-        android:orientation="vertical">
+        android:layout_marginTop="45dp"
+        android:orientation="vertical"
+        android:padding="5dp">
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/skladnoiButton"
-            android:text="Складной"
-            android:layout_gravity="center_horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/AnotherButtonsTwo"
+            android:text="Складной">
 
         </Button>
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/formovoiButton"
-            android:text="Формованный"
-            android:layout_gravity="center_horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/AnotherButtonsThree"
+            android:text="Формованный">
 
         </Button>
 
         <Button
+            android:id="@+id/neformovoiButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/neformovoiButton"
-            android:text="Неформованный"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            style="@style/AnotherButtonsFour"
+            android:text="Неформованный">
 
         </Button>
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/searchLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/searchLine"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/constructionButtons"
-        android:orientation="vertical"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="93dp"
+        android:orientation="vertical">
 
         <Button
+            android:id="@+id/searchButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/searchButton"
-            android:text="Поиск"
-            android:onClick="searchNewButton"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:text="Поиск">
 
         </Button>
 
         <Button
+            android:id="@+id/testing_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/testing_button"
-            android:text="Сброс"
+            android:layout_gravity="center_horizontal"
             android:onClick="startTest"
-            android:layout_gravity="center_horizontal">
+            android:text="Сброс">
 
         </Button>
 

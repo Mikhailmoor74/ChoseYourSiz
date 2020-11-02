@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="4dp"
+    app:cardCornerRadius="6dp"
+    app:cardBackgroundColor="@color/colorBackgroundCard"
+
     android:layout_margin="4dp">
 
     <RelativeLayout
@@ -25,6 +27,7 @@
             android:text="Название респиратора"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:layout_marginTop="20dp"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@id/respiratorImageView">
         </TextView>
