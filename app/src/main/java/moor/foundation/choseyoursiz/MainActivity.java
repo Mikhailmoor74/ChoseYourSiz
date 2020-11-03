@@ -3,6 +3,7 @@ package moor.foundation.choseyoursiz;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Button formButton;
     Button notFormButton;
 
-    int flag;
+    Dialog dialog;
 
 
     @Override
@@ -141,6 +143,13 @@ public class MainActivity extends AppCompatActivity {
         notFormButton.setOnClickListener(buttonClickListener);
         searchButton.setOnClickListener(buttonClickListener);
 
+        dialog = new Dialog(MainActivity.this);
+        dialog.setTitle("Привет");
+        dialog.setContentView(R.layout.dialog);
+
+        TextView textView = dialog.findViewById(R.id.dialogTitleTextView);
+        textView.setText("Ууу навыбираем респиков ща");
+
 
     }
 
@@ -157,5 +166,9 @@ public class MainActivity extends AppCompatActivity {
 
         recreate();
 
+    }
+
+    public void startDialog(View view) {
+        dialog.show();
     }
 }

@@ -14,12 +14,36 @@
 
     </ImageView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="Привет! Сейчас я помогу тебе выбрать респиратор">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    </TextView>
+
+        <moor.foundation.choseyoursiz.secrettext.SecretTextView
+            android:id="@+id/firstDynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="300dp"
+            android:text="Привет!"
+            android:textSize="30sp">
+
+        </moor.foundation.choseyoursiz.secrettext.SecretTextView>
+
+        <moor.foundation.choseyoursiz.secrettext.SecretTextView
+            android:id="@+id/firstDynamic2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstDynamic"
+            android:layout_centerHorizontal="true"
+            android:text="Выбери себе респиратор"
+            android:textSize="30sp">
+
+        </moor.foundation.choseyoursiz.secrettext.SecretTextView>
+
+    </RelativeLayout>
+
+
+
 
 </FrameLayout>
