@@ -2,4 +2,7 @@
     <string name="app_name">Chose Your SIZ</string>
     <string name="defendClass">Класс защиты</string>
     <string name="clapan">Клапан выдоха</string>
+
+
+    <string name="DialogText">Текст</string>
 </resources>

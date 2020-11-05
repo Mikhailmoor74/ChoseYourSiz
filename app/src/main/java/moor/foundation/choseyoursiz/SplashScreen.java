@@ -25,7 +25,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep(6000);
+                    sleep(4000);
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
@@ -39,12 +39,12 @@ public class SplashScreen extends AppCompatActivity {
         thread.start();
 
         secretTextView = findViewById(R.id.firstDynamic);
-        secretTextView.setDuration(3000);
+        secretTextView.setDuration(2000);
         secretTextView.setIsVisible(true);
         secretTextView.show();
 
         secretTextView2 = findViewById(R.id.firstDynamic2);
-        secretTextView2.setDuration(5000);
+        secretTextView2.setDuration(3000);
         secretTextView2.setIsVisible(true);
         secretTextView2.show();
 

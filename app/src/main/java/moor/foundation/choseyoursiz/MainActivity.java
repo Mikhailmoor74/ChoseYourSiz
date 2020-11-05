@@ -19,6 +19,7 @@ import java.util.List;
 import moor.foundation.choseyoursiz.data.Database;
 import moor.foundation.choseyoursiz.data.Respirators;
 import moor.foundation.choseyoursiz.data.RespiratorsDao;
+import moor.foundation.choseyoursiz.data.Utils;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -146,9 +147,12 @@ public class MainActivity extends AppCompatActivity {
         dialog = new Dialog(MainActivity.this);
         dialog.setTitle("Привет");
         dialog.setContentView(R.layout.dialog);
+        Utils utils = new Utils();
 
-        TextView textView = dialog.findViewById(R.id.dialogTitleTextView);
-        textView.setText("Ууу навыбираем респиков ща");
+        TextView textView = dialog.findViewById(R.id.dialogTextTextView);
+        String dialogText = utils.DIALOG_DESCRIPTION;
+        textView.setText(dialogText);
+
 
 
     }
