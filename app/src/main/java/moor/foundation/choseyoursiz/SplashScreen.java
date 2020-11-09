@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import moor.foundation.choseyoursiz.secrettext.SecretTextView;
 
@@ -21,7 +22,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        Thread thread = new Thread() {
+        /*Thread thread = new Thread() {
             @Override
             public void run() {
                 try {
@@ -36,7 +37,7 @@ public class SplashScreen extends AppCompatActivity {
             }
         };
 
-        thread.start();
+        thread.start();*/
 
         secretTextView = findViewById(R.id.firstDynamic);
         secretTextView.setDuration(2000);
@@ -49,13 +50,14 @@ public class SplashScreen extends AppCompatActivity {
         secretTextView2.show();
 
 
-
-        /*change = (Button) findViewById(R.id.change);
-        change.setOnClickListener(new View.OnClickListener() {
+        ImageView imageView = findViewById(R.id.backImageView);
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                secretTextView.setText("This is really an amazing TextView");
+                startActivity(new Intent(
+                        SplashScreen.this,
+                        MainActivity.class));
             }
-        });*/
+        });
     }
 }

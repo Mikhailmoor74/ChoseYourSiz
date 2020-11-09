@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:background="@drawable/backgroundmainactivity"
     tools:context=".CardAcivity">
 
     <RelativeLayout
@@ -41,6 +42,7 @@
             android:layout_toEndOf="@id/imageView"
             android:layout_below="@id/TitleTextView2"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             />
 
         <TextView
@@ -48,6 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ClassOfDefend"
+            android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/classOfDefendtextViewText"
             android:layout_below="@id/TitleTextView2"
 
@@ -61,6 +64,7 @@
             android:layout_toEndOf="@id/imageView"
             android:layout_below="@id/classOfDefendtextView"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             />
 
         <TextView
@@ -68,6 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Clapan"
+            android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/ClapanTextViewText"
             android:layout_below="@id/classOfDefendtextView"
             />
@@ -77,6 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Конструкция: "
+            android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/imageView"
             android:layout_below="@id/ClapanTextView"
             android:layout_marginLeft="10dp"
@@ -87,6 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Construction"
+            android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/ConstructionTextViewText"
             android:layout_below="@id/ClapanTextView"
             />
@@ -105,6 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Description"
+            android:fontFamily="sans-serif-black"
             />
     </RelativeLayout>
 

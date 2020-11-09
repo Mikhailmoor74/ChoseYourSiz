@@ -25,11 +25,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/titleTextView"
-            android:text="Название респиратора"
+            android:text="Название"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:layout_alignParentTop="true"
+            android:layout_marginLeft="80dp"
             android:layout_toEndOf="@id/respiratorImageView">
         </TextView>
 
@@ -40,8 +41,9 @@
             android:id="@+id/defendTextViewText"
             android:text="Класс защиты: "
             android:textSize="15sp"
-            android:textStyle="italic"
+            android:textStyle="bold"
             android:layout_below="@id/titleTextView"
+            android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/respiratorImageView">
 
         </TextView>
@@ -53,6 +55,7 @@
             android:id="@+id/defendTextView"
             android:text="Класс защиты"
             android:textSize="15sp"
+            android:layout_marginTop="5dp"
             android:textStyle="italic"
             android:layout_below="@id/titleTextView"
             android:layout_toEndOf="@id/defendTextViewText">
@@ -66,7 +69,8 @@
             android:id="@+id/clapanTextViewText"
             android:text="Клапан: "
             android:textSize="15sp"
-            android:textStyle="italic"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
             android:layout_below="@id/defendTextView"
             android:layout_toEndOf="@id/respiratorImageView">
         </TextView>
@@ -78,6 +82,7 @@
             android:id="@+id/clapanTextView"
             android:text="Клапан"
             android:textSize="15sp"
+            android:layout_marginTop="5dp"
             android:textStyle="italic"
             android:layout_below="@id/defendTextView"
             android:layout_toEndOf="@id/clapanTextViewText">
@@ -89,8 +94,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/constructionTextViewText"
             android:text="Конструкция: "
+            android:layout_marginTop="5dp"
             android:textSize="15sp"
-            android:textStyle="italic"
+            android:textStyle="bold"
             android:layout_below="@id/clapanTextView"
             android:layout_toEndOf="@id/respiratorImageView">
         </TextView>
@@ -103,6 +109,7 @@
             android:text="Конструкция"
             android:textSize="15sp"
             android:textStyle="italic"
+            android:layout_marginTop="5dp"
             android:layout_below="@id/clapanTextView"
             android:layout_toEndOf="@id/constructionTextViewText">
 
