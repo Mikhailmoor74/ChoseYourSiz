@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/relativeFirstLine"
+        android:background="@drawable/roundcard"
         >
 
         <ImageView
@@ -29,6 +30,7 @@
             android:text="Title"
             android:textStyle="bold"
             android:textSize="25sp"
+            android:textColor="@android:color/black"
             android:layout_toEndOf="@id/imageView"
             android:layout_marginTop="20dp"
             android:layout_marginStart="70dp"
@@ -43,6 +45,7 @@
             android:layout_below="@id/TitleTextView2"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
             />
 
         <TextView
@@ -53,6 +56,7 @@
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/classOfDefendtextViewText"
             android:layout_below="@id/TitleTextView2"
+            android:textColor="@android:color/black"
 
             />
 
@@ -65,6 +69,7 @@
             android:layout_below="@id/classOfDefendtextView"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
             />
 
         <TextView
@@ -75,6 +80,7 @@
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/ClapanTextViewText"
             android:layout_below="@id/classOfDefendtextView"
+            android:textColor="@android:color/black"
             />
 
         <TextView
@@ -86,6 +92,7 @@
             android:layout_toEndOf="@id/imageView"
             android:layout_below="@id/ClapanTextView"
             android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
             />
 
         <TextView
@@ -93,6 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Construction"
+            android:textColor="@android:color/black"
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/ConstructionTextViewText"
             android:layout_below="@id/ClapanTextView"
@@ -107,13 +115,14 @@
         android:id="@+id/relariveSecondLine"
         android:padding="10dp"
         android:layout_below="@id/relativeFirstLine">
+
         <TextView
             android:id="@+id/descriptionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Description"
-            android:fontFamily="sans-serif-black"
-            />
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@android:color/black"
+            android:text="Description" />
     </RelativeLayout>
 
 

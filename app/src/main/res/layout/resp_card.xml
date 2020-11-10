@@ -4,13 +4,15 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="6dp"
+    android:background="@drawable/roundcard"
     app:cardBackgroundColor="@color/material_on_background_emphasis_high_type"
-
-    android:layout_margin="4dp">
+    android:layout_margin="5dp"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <ImageView
             android:layout_width="150dp"
