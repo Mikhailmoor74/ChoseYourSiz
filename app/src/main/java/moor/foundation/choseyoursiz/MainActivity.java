@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         final Intent intent = new Intent(MainActivity.this, NextActivity.class);
 
 
+        
         View.OnClickListener buttonClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
