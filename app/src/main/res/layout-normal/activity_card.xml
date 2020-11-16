@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/backgroundmainactivity"
+    tools:context=".CardAcivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeFirstLine"
+        android:background="@drawable/roundcard"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/TitleTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            />
+
+        <TextView
+            android:id="@+id/classOfDefendtextViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Класс защиты: "
+            android:layout_toEndOf="@id/imageView"
+            android:layout_below="@id/TitleTextView2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/classOfDefendtextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ClassOfDefend"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/classOfDefendtextViewText"
+            android:layout_below="@id/TitleTextView2"
+            android:textColor="@android:color/black"
+
+            />
+
+        <TextView
+            android:id="@+id/ClapanTextViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Клапан: "
+            android:layout_toEndOf="@id/imageView"
+            android:layout_below="@id/classOfDefendtextView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/ClapanTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clapan"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/ClapanTextViewText"
+            android:layout_below="@id/classOfDefendtextView"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/ConstructionTextViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Конструкция: "
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_below="@id/ClapanTextView"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/ConstructionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Construction"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/ConstructionTextViewText"
+            android:layout_below="@id/ClapanTextView"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relariveSecondLine"
+        android:padding="10dp"
+        android:layout_below="@id/relativeFirstLine">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@android:color/black"
+                android:text="Description" />
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:src="@drawable/backgroundmainactivity"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/backImageView">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <moor.foundation.choseyoursiz.secrettext.SecretTextView
+            android:id="@+id/firstDynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:text="Привет!"
+            android:textSize="30sp">
+
+        </moor.foundation.choseyoursiz.secrettext.SecretTextView>
+
+        <moor.foundation.choseyoursiz.secrettext.SecretTextView
+            android:id="@+id/firstDynamic2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstDynamic"
+            android:layout_centerHorizontal="true"
+            android:text="Выбери себе респиратор"
+            android:textSize="30sp">
+
+        </moor.foundation.choseyoursiz.secrettext.SecretTextView>
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

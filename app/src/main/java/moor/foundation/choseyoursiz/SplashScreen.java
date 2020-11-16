@@ -49,15 +49,33 @@ public class SplashScreen extends AppCompatActivity {
         secretTextView2.setIsVisible(true);
         secretTextView2.show();
 
+        if (secretTextView2.getIsVisible()) {
+            Thread thread = new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        sleep(4000);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    } finally {
+                        startActivity(new Intent(
+                                SplashScreen.this,
+                                MainActivity.class));
+                    }
+                }
+            };
+            thread.start();
+        }
+            ImageView imageView = findViewById(R.id.backImageView);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(
+                            SplashScreen.this,
+                            MainActivity.class));
+                }
+            });
 
-        ImageView imageView = findViewById(R.id.backImageView);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(
-                        SplashScreen.this,
-                        MainActivity.class));
-            }
-        });
+
     }
 }
