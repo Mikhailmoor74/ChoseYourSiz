@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +35,8 @@ public class NextActivity extends AppCompatActivity {
 
     Database db;
 
+    Spinner spinner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,17 +46,48 @@ public class NextActivity extends AppCompatActivity {
 
         Database db = App.getInstance().getDatabase();
 
-        RespiratorsDao respiratorsDao = db.respiratorsDao();
-
-//        List<Respirators> respItem = respiratorsDao.getAll();
+        final RespiratorsDao respiratorsDao = db.respiratorsDao();
 
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-//        adapter = new RespAdapter(respItem, this);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-//        recyclerView.setAdapter(adapter);
+
+        Spinner spinner = findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (position == 0) {
+                    List<Respirators> respItem = respiratorsDao.getAll();
+                    adapter = new RespAdapter(respItem, getApplicationContext());
+                    recyclerView.setAdapter(adapter);
+                } else if (position == 1) {
+                    List<Respirators> nrzList = respiratorsDao.getHP3();
+                    adapter = new RespAdapter(nrzList, getApplicationContext());
+                    recyclerView.setAdapter(adapter);
+                } else if (position == 2) {
+                    List<Respirators> spiroList = respiratorsDao.getSpiro();
+                    adapter = new RespAdapter(spiroList, getApplicationContext());
+                    recyclerView.setAdapter(adapter);
+                } else if (position == 3) {
+                    List<Respirators> alinaList = respiratorsDao.getAlina();
+                    adapter = new RespAdapter(alinaList, getApplicationContext());
+                    recyclerView.setAdapter(adapter);
+                } else if (position == 4) {
+                    List<Respirators> threeMList = respiratorsDao.get3M();
+                    adapter = new RespAdapter(threeMList, getApplicationContext());
+                    recyclerView.setAdapter(adapter);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
 
 

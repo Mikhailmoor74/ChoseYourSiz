@@ -5,4 +5,13 @@
 
 
     <string name="DialogText">Текст</string>
+
+
+    <string-array name="spinner">
+        <item>Все производители</item>
+        <item>НРЗ</item>
+        <item>Спиро</item>
+        <item>Алина</item>
+        <item>3М</item>
+    </string-array>
 </resources>

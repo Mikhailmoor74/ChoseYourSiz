@@ -113,6 +113,19 @@ public interface RespiratorsDao {
     List<Respirators> getFFP3NoClapanNoForm();
 
 
+    @Query("SELECT * FROM Respirators WHERE title LIKE '%НРЗ%'")
+    List<Respirators> getHP3();
+
+    @Query("SELECT * FROM Respirators WHERE title LIKE '%Спиро%'")
+    List<Respirators> getSpiro();
+
+    @Query("SELECT * FROM Respirators WHERE title LIKE '%Алина%'")
+    List<Respirators> getAlina();
+
+    @Query("SELECT * FROM Respirators WHERE title LIKE '%3М%'")
+    List<Respirators> get3M();
+
+
     @Query("DELETE FROM Respirators")
     void deleteAll();
 

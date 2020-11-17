@@ -69,6 +69,7 @@ public class App extends Application {
         respNrz0113.clapan = "Да";
         respNrz0113.construction = "Формованный";
         respNrz0113.imageResource = R.drawable.nrz0113;
+        respNrz0113.description = utils.RESP_NRZ_0113;
         respiratorsDao.insert(respNrz0113);
 
         Respirators respNrz0112a = new Respirators();
@@ -90,7 +91,7 @@ public class App extends Application {
         respiratorsDao.insert(respNrz0112av);
 
         Respirators respNrz0112v = new Respirators();
-        respNrz0112v.title = "НРЗ-0112АВ";
+        respNrz0112v.title = "НРЗ-0112В";
         respNrz0112v.classOfDefend = "FFP 2";
         respNrz0112v.clapan = "Да";
         respNrz0112v.construction = "Формованный";
@@ -279,6 +280,92 @@ public class App extends Application {
         spiro203.imageResource = R.drawable.spiro203;
         spiro203.description = utils.RESP_SPIRO_203;
         respiratorsDao.insert(spiro203);
+
+        Respirators spiro202 = new Respirators();
+        spiro202.title = "Спиро-202";
+        spiro202.classOfDefend = "FFP 2";
+        spiro202.clapan = "Нет";
+        spiro202.construction = "Складной";
+        spiro202.imageResource = R.drawable.spiro202;
+        spiro202.description = utils.RESP_SPIRO_202;
+        respiratorsDao.insert(spiro202);
+
+        Respirators spiro113 = new Respirators();
+        spiro113.title = "Спиро-113";
+        spiro113.classOfDefend = "FFP 3";
+        spiro113.clapan = "Да";
+        spiro113.construction = "Складной";
+        spiro113.imageResource = R.drawable.spiro113;
+        spiro113.description = utils.RESP_SPIRO_113;
+        respiratorsDao.insert(spiro113);
+
+        Respirators spiro112 = new Respirators();
+        spiro112.title = "Спиро-112";
+        spiro112.classOfDefend = "FFP 2";
+        spiro112.clapan = "Да";
+        spiro112.construction = "Складной";
+        spiro112.imageResource = R.drawable.spiro112;
+        spiro112.description = utils.RESP_SPIRO_112;
+        respiratorsDao.insert(spiro112);
+
+        Respirators spiro111 = new Respirators();
+        spiro111.title = "Спиро-111";
+        spiro111.classOfDefend = "FFP 1";
+        spiro111.clapan = "Да";
+        spiro111.construction = "Складной";
+        spiro111.imageResource = R.drawable.spiro111;
+        spiro111.description = utils.RESP_SPIRO_111;
+        respiratorsDao.insert(spiro111);
+
+        Respirators spiro103 = new Respirators();
+        spiro103.title = "Спиро-103";
+        spiro103.classOfDefend = "FFP 3";
+        spiro103.clapan = "Нет";
+        spiro103.construction = "Складной";
+        spiro103.imageResource = R.drawable.spiro103;
+        spiro103.description = utils.RESP_SPIRO_103;
+        respiratorsDao.insert(spiro103);
+
+        Respirators spiro102 = new Respirators();
+        spiro102.title = "Спиро-102";
+        spiro102.classOfDefend = "FFP 2";
+        spiro102.clapan = "Нет";
+        spiro102.construction = "Складной";
+        spiro102.imageResource = R.drawable.spiro102;
+        spiro102.description = utils.RESP_SPIRO_102;
+        respiratorsDao.insert(spiro102);
+
+        Respirators spiro101 = new Respirators();
+        spiro101.title = "Спиро-101";
+        spiro101.classOfDefend = "FFP 1";
+        spiro101.clapan = "Нет";
+        spiro101.construction = "Складной";
+        spiro101.imageResource = R.drawable.spiro101;
+        spiro101.description = utils.RESP_SPIRO_101;
+        respiratorsDao.insert(spiro101);
+
+        // Респираторы Алина
+
+        Respirators alina200 = new Respirators();
+        alina200.title = "Алина-200";
+        alina200.classOfDefend = "FFP 1";
+        alina200.clapan = "Нет";
+        alina200.construction = "Складной";
+        alina200.imageResource = R.drawable.spiro101;
+        alina200.description = utils.RESP_SPIRO_101;
+        respiratorsDao.insert(alina200);
+
+
+        // Респираторы 3М
+
+        Respirators threeM8101 = new Respirators();
+        threeM8101.title = "3М-8101";
+        threeM8101.classOfDefend = "FFP 1";
+        threeM8101.clapan = "Нет";
+        threeM8101.construction = "Складной";
+        threeM8101.imageResource = R.drawable.spiro101;
+        threeM8101.description = utils.RESP_SPIRO_101;
+        respiratorsDao.insert(threeM8101);
 
 
     }
