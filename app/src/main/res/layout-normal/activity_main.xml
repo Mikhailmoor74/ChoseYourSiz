@@ -32,7 +32,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/defendClassLine"
         android:layout_below="@id/titleLine"
-        android:layout_marginTop="0dp">
+        android:layout_marginTop="50dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/defendClassLine"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:padding="5dp">
 
         <Button
@@ -90,7 +90,7 @@
         android:id="@+id/clapanLine"
         android:layout_below="@id/defendButtonsLine"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="30dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/clapanLine"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:padding="5dp">
 
         <Button
@@ -138,7 +138,7 @@
         android:id="@+id/constructionLine"
         android:layout_below="@id/clapanButtonsLine"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="30dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -157,7 +157,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/constructionLine"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:padding="5dp">
 
@@ -195,7 +195,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/constructionButtons"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
         <Button

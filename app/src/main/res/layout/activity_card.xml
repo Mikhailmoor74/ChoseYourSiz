@@ -120,7 +120,6 @@
             android:id="@+id/descriptionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
             android:fontFamily="sans-serif-condensed-medium"
             android:textColor="@android:color/black"
             android:text="Description" />
