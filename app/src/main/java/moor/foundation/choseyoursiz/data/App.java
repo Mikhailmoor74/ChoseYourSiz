@@ -348,12 +348,102 @@ public class App extends Application {
 
         Respirators alina200 = new Respirators();
         alina200.title = "Алина-200";
-        alina200.classOfDefend = "FFP 1";
+        alina200.classOfDefend = "FFP 2";
         alina200.clapan = "Нет";
-        alina200.construction = "Складной";
-        alina200.imageResource = R.drawable.spiro101;
-        alina200.description = utils.RESP_SPIRO_101;
+        alina200.construction = "Неформованный";
+        alina200.imageResource = R.drawable.alina200;
+        alina200.description = utils.RESP_ALINA_200;
         respiratorsDao.insert(alina200);
+
+        Respirators alina100 = new Respirators();
+        alina100.title = "Алина-100";
+        alina100.classOfDefend = "FFP 1";
+        alina100.clapan = "Нет";
+        alina100.construction = "Неформованный";
+        alina100.imageResource = R.drawable.alina100;
+        alina100.description = utils.RESP_ALINA_100;
+        respiratorsDao.insert(alina100);
+
+        Respirators alina110 = new Respirators();
+        alina110.title = "Алина-110";
+        alina110.classOfDefend = "FFP 1";
+        alina110.clapan = "Да";
+        alina110.construction = "Неформованный";
+        alina110.imageResource = R.drawable.alina110;
+        alina110.description = utils.RESP_ALINA_110;
+        respiratorsDao.insert(alina110);
+
+        Respirators alina210 = new Respirators();
+        alina210.title = "Алина-210";
+        alina210.classOfDefend = "FFP 2";
+        alina210.clapan = "Да";
+        alina210.construction = "Неформованный";
+        alina210.imageResource = R.drawable.alina210;
+        alina210.description = utils.RESP_ALINA_210;
+        respiratorsDao.insert(alina210);
+
+        Respirators alinaP= new Respirators();
+        alinaP.title = "Алина-П";
+        alinaP.classOfDefend = "FFP 2";
+        alinaP.clapan = "Да";
+        alinaP.construction = "Неформованный";
+        alinaP.imageResource = R.drawable.alinap;
+        alinaP.description = utils.RESP_ALINA_P;
+        respiratorsDao.insert(alinaP);
+
+        Respirators alina201 = new Respirators();
+        alina201.title = "Алина-201";
+        alina201.classOfDefend = "FFP 2";
+        alina201.clapan = "Нет";
+        alina201.construction = "Неформованный";
+        alina201.imageResource = R.drawable.alina201;
+        alina201.description = utils.RESP_ALINA_201;
+        respiratorsDao.insert(alina201);
+
+        Respirators alina211 = new Respirators();
+        alina211.title = "Алина-211";
+        alina211.classOfDefend = "FFP 2";
+        alina211.clapan = "Да";
+        alina211.construction = "Неформованный";
+        alina211.imageResource = R.drawable.alina211;
+        alina211.description = utils.RESP_ALINA_211;
+        respiratorsDao.insert(alina211);
+
+        Respirators alina212 = new Respirators();
+        alina212.title = "Алина-212";
+        alina212.classOfDefend = "FFP 2";
+        alina212.clapan = "Да";
+        alina212.construction = "Неформованный";
+        alina212.imageResource = R.drawable.alina212;
+        alina212.description = utils.RESP_ALINA_212;
+        respiratorsDao.insert(alina212);
+
+        Respirators alina213 = new Respirators();
+        alina213.title = "Алина-213";
+        alina213.classOfDefend = "FFP 2";
+        alina213.clapan = "Да";
+        alina213.construction = "Неформованный";
+        alina213.imageResource = R.drawable.alina213;
+        alina213.description = utils.RESP_ALINA_213;
+        respiratorsDao.insert(alina213);
+
+        Respirators alina311 = new Respirators();
+        alina311.title = "Алина-311";
+        alina311.classOfDefend = "FFP 3";
+        alina311.clapan = "Да";
+        alina311.construction = "Неформованный";
+        alina311.imageResource = R.drawable.alina311;
+        alina311.description = utils.RESP_ALINA_311;
+        respiratorsDao.insert(alina311);
+
+        Respirators alina312 = new Respirators();
+        alina312.title = "Алина-312";
+        alina312.classOfDefend = "FFP 3";
+        alina312.clapan = "Да";
+        alina312.construction = "Неформованный";
+        alina312.imageResource = R.drawable.alina312;
+        alina312.description = utils.RESP_ALINA_312;
+        respiratorsDao.insert(alina312);
 
 
         // Респираторы 3М

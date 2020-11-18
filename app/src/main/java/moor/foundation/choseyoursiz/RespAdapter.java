@@ -88,6 +88,7 @@ public class RespAdapter extends RecyclerView.Adapter<RespAdapter.RespViewHolder
             intent.putExtra("construction", respirators.getConstruction());
             intent.putExtra("image", respirators.getImageResource());
             intent.putExtra("description", respirators.getDescription());
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
 
 

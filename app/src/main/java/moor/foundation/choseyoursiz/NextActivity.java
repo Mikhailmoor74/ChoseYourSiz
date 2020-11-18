@@ -54,39 +54,7 @@ public class NextActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        Spinner spinner = findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                if (position == 0) {
-                    List<Respirators> respItem = respiratorsDao.getAll();
-                    adapter = new RespAdapter(respItem, getApplicationContext());
-                    recyclerView.setAdapter(adapter);
-                } else if (position == 1) {
-                    List<Respirators> nrzList = respiratorsDao.getHP3();
-                    adapter = new RespAdapter(nrzList, getApplicationContext());
-                    recyclerView.setAdapter(adapter);
-                } else if (position == 2) {
-                    List<Respirators> spiroList = respiratorsDao.getSpiro();
-                    adapter = new RespAdapter(spiroList, getApplicationContext());
-                    recyclerView.setAdapter(adapter);
-                } else if (position == 3) {
-                    List<Respirators> alinaList = respiratorsDao.getAlina();
-                    adapter = new RespAdapter(alinaList, getApplicationContext());
-                    recyclerView.setAdapter(adapter);
-                } else if (position == 4) {
-                    List<Respirators> threeMList = respiratorsDao.get3M();
-                    adapter = new RespAdapter(threeMList, getApplicationContext());
-                    recyclerView.setAdapter(adapter);
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
 
 
@@ -186,7 +154,7 @@ public class NextActivity extends AppCompatActivity {
                 List<Respirators> ffp3NoClapanList = respiratorsDao.getFFP3NoClapan();
                 adapter = new RespAdapter(ffp3NoClapanList, this);
                 recyclerView.setAdapter(adapter);
-                Toast.makeText(this, "Сработал метод FFP 3 и Клапан ДА", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Сработал метод FFP 3 и Клапан Нет", Toast.LENGTH_SHORT).show();
                 break;
             case 141:
                 List<Respirators> ffp1YesClapanSkladList = respiratorsDao.getFFP1YesClapanSklad();
@@ -302,6 +270,40 @@ public class NextActivity extends AppCompatActivity {
                 recyclerView.setAdapter(adapter);
                 break;
         }
+
+        Spinner spinner = findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (position == 0) {
+                    List<Respirators> respItem = respiratorsDao.getAll();
+                    adapter = new RespAdapter(respItem, getApplicationContext());
+                    recyclerView.setAdapter(adapter);
+                } else if (position == 1) {
+                    List<Respirators> nrzList = respiratorsDao.getHP3();
+                    adapter = new RespAdapter(nrzList, getApplicationContext());
+                    recyclerView.setAdapter(adapter);
+                } else if (position == 2) {
+                    List<Respirators> spiroList = respiratorsDao.getSpiro();
+                    adapter = new RespAdapter(spiroList, getApplicationContext());
+                    recyclerView.setAdapter(adapter);
+                } else if (position == 3) {
+                    List<Respirators> alinaList = respiratorsDao.getAlina();
+                    adapter = new RespAdapter(alinaList, getApplicationContext());
+                    recyclerView.setAdapter(adapter);
+                } else if (position == 4) {
+                    List<Respirators> threeMList = respiratorsDao.get3M();
+                    adapter = new RespAdapter(threeMList, getApplicationContext());
+                    recyclerView.setAdapter(adapter);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
     }
 }
