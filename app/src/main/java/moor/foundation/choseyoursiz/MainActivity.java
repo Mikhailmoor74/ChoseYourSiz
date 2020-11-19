@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
                         intent.putExtra("notform", 300);
                         intent.putExtra("skladnoi", 0);
                         intent.putExtra("form", 0);
+                        break;
 
                     case R.id.searchButton:
                         startActivity(intent);

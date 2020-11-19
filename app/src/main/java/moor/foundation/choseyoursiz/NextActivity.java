@@ -54,11 +54,46 @@ public class NextActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
+        Spinner spinner = findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
+                switch (position) {
+                    /*case 0:
+                        List<Respirators> allList = respiratorsDao.getAll();
+                        adapter = new RespAdapter(allList, getApplicationContext());
+                        recyclerView.setAdapter(adapter);
+                        break;*/
+                    case 1:
+                        List<Respirators> nrzList = respiratorsDao.getHP3();
+                        adapter = new RespAdapter(nrzList, getApplicationContext());
+                        recyclerView.setAdapter(adapter);
+                        break;
+                    case 2:
+                        List<Respirators> spiroList = respiratorsDao.getSpiro();
+                        adapter = new RespAdapter(spiroList, getApplicationContext());
+                        recyclerView.setAdapter(adapter);
+                        break;
+                    case 3:
+                        List<Respirators> alinaList = respiratorsDao.getAlina();
+                        adapter = new RespAdapter(alinaList, getApplicationContext());
+                        recyclerView.setAdapter(adapter);
+                        break;
+                    case 4:
+                        List<Respirators> threeMList = respiratorsDao.get3M();
+                        adapter = new RespAdapter(threeMList, getApplicationContext());
+                        recyclerView.setAdapter(adapter);
+                        break;
 
+                }
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
-
+            }
+        });
 
 
 
@@ -271,39 +306,7 @@ public class NextActivity extends AppCompatActivity {
                 break;
         }
 
-        Spinner spinner = findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                if (position == 0) {
-                    List<Respirators> respItem = respiratorsDao.getAll();
-                    adapter = new RespAdapter(respItem, getApplicationContext());
-                    recyclerView.setAdapter(adapter);
-                } else if (position == 1) {
-                    List<Respirators> nrzList = respiratorsDao.getHP3();
-                    adapter = new RespAdapter(nrzList, getApplicationContext());
-                    recyclerView.setAdapter(adapter);
-                } else if (position == 2) {
-                    List<Respirators> spiroList = respiratorsDao.getSpiro();
-                    adapter = new RespAdapter(spiroList, getApplicationContext());
-                    recyclerView.setAdapter(adapter);
-                } else if (position == 3) {
-                    List<Respirators> alinaList = respiratorsDao.getAlina();
-                    adapter = new RespAdapter(alinaList, getApplicationContext());
-                    recyclerView.setAdapter(adapter);
-                } else if (position == 4) {
-                    List<Respirators> threeMList = respiratorsDao.get3M();
-                    adapter = new RespAdapter(threeMList, getApplicationContext());
-                    recyclerView.setAdapter(adapter);
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
     }
 }

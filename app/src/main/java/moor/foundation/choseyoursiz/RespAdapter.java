@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -79,6 +80,7 @@ public class RespAdapter extends RecyclerView.Adapter<RespAdapter.RespViewHolder
         @Override
         public void onClick(View v) {
             int position = getAdapterPosition();
+
             Respirators respirators = respItem.get(position);
 
             Intent intent = new Intent(context, CardAcivity.class);
@@ -89,6 +91,7 @@ public class RespAdapter extends RecyclerView.Adapter<RespAdapter.RespViewHolder
             intent.putExtra("image", respirators.getImageResource());
             intent.putExtra("description", respirators.getDescription());
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
             context.startActivity(intent);
 
 
