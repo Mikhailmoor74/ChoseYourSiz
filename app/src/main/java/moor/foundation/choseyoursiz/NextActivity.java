@@ -7,12 +7,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import moor.foundation.choseyoursiz.data.App;
@@ -23,19 +26,10 @@ import moor.foundation.choseyoursiz.data.RespiratorsDao;
 
 public class NextActivity extends AppCompatActivity {
 
-    TextView textView;
-    ListView listView;
 
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
-
-    /*private DatabaseHelper mDBHelper;
-    private SQLiteDatabase mDb;*/
-
-    Database db;
-
-    Spinner spinner;
 
 
     @Override
@@ -55,45 +49,8 @@ public class NextActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         Spinner spinner = findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                switch (position) {
-                    /*case 0:
-                        List<Respirators> allList = respiratorsDao.getAll();
-                        adapter = new RespAdapter(allList, getApplicationContext());
-                        recyclerView.setAdapter(adapter);
-                        break;*/
-                    case 1:
-                        List<Respirators> nrzList = respiratorsDao.getHP3();
-                        adapter = new RespAdapter(nrzList, getApplicationContext());
-                        recyclerView.setAdapter(adapter);
-                        break;
-                    case 2:
-                        List<Respirators> spiroList = respiratorsDao.getSpiro();
-                        adapter = new RespAdapter(spiroList, getApplicationContext());
-                        recyclerView.setAdapter(adapter);
-                        break;
-                    case 3:
-                        List<Respirators> alinaList = respiratorsDao.getAlina();
-                        adapter = new RespAdapter(alinaList, getApplicationContext());
-                        recyclerView.setAdapter(adapter);
-                        break;
-                    case 4:
-                        List<Respirators> threeMList = respiratorsDao.get3M();
-                        adapter = new RespAdapter(threeMList, getApplicationContext());
-                        recyclerView.setAdapter(adapter);
-                        break;
 
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
 
 
@@ -307,6 +264,56 @@ public class NextActivity extends AppCompatActivity {
         }
 
 
+        ArrayAdapter<?> spinnerAdapter =
+                ArrayAdapter.createFromResource(this, R.array.spinner, android.R.layout.simple_spinner_item);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(spinnerAdapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+
+
+                switch (position) {
+                    /*case 0:
+                        List<Respirators> allList = respiratorsDao.getAll();
+                        adapter = new RespAdapter(allList, getApplicationContext());
+                        recyclerView.setAdapter(adapter);
+                        break;*/
+                    case 1:
+                        /*List<Respirators> nrzList = respiratorsDao.getHP3();
+                        adapter = new RespAdapter(nrzList, getApplicationContext());
+                        recyclerView.setAdapter(adapter);*/
+                        break;
+                    case 2:
+                        List<Respirators> spiroList = respiratorsDao.getSpiro();
+                        adapter = new RespAdapter(spiroList, getApplicationContext());
+                        recyclerView.setAdapter(adapter);
+                        break;
+                    case 3:
+                        List<Respirators> alinaList = respiratorsDao.getAlina();
+                        adapter = new RespAdapter(alinaList, getApplicationContext());
+                        recyclerView.setAdapter(adapter);
+                        break;
+                    case 4:
+                        List<Respirators> threeMList = respiratorsDao.get3M();
+                        adapter = new RespAdapter(threeMList, getApplicationContext());
+                        recyclerView.setAdapter(adapter);
+                        break;
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
 
     }
+
 }

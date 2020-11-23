@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,6 +28,13 @@ public class RespAdapter extends RecyclerView.Adapter<RespAdapter.RespViewHolder
         this.respItem = respItem;
         this.context = context;
     }
+
+    public void updateList(List<Respirators> list) {
+        respItem = list;
+        notifyDataSetChanged();
+    }
+
+
 
     @NonNull
     @Override
@@ -96,5 +104,7 @@ public class RespAdapter extends RecyclerView.Adapter<RespAdapter.RespViewHolder
 
 
         }
+
     }
+
 }
