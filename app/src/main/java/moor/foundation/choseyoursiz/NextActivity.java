@@ -48,7 +48,7 @@ public class NextActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        Spinner spinner = findViewById(R.id.spinner);
+     //   Spinner spinner = findViewById(R.id.spinner);
 
 
 
@@ -264,7 +264,8 @@ public class NextActivity extends AppCompatActivity {
         }
 
 
-        ArrayAdapter<?> spinnerAdapter =
+
+       /* ArrayAdapter<?> spinnerAdapter =
                 ArrayAdapter.createFromResource(this, R.array.spinner, android.R.layout.simple_spinner_item);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -277,15 +278,16 @@ public class NextActivity extends AppCompatActivity {
 
 
                 switch (position) {
-                    /*case 0:
+                    *//*case 0:
                         List<Respirators> allList = respiratorsDao.getAll();
                         adapter = new RespAdapter(allList, getApplicationContext());
                         recyclerView.setAdapter(adapter);
-                        break;*/
+                        break;*//*
                     case 1:
-                        /*List<Respirators> nrzList = respiratorsDao.getHP3();
+                        *//*List<Respirators> nrzList = respiratorsDao.getHP3();
                         adapter = new RespAdapter(nrzList, getApplicationContext());
-                        recyclerView.setAdapter(adapter);*/
+                        recyclerView.setAdapter(adapter);*//*
+
                         break;
                     case 2:
                         List<Respirators> spiroList = respiratorsDao.getSpiro();
@@ -310,7 +312,7 @@ public class NextActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        });
+        });*/
 
 
 
