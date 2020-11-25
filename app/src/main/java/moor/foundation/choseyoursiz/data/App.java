@@ -452,10 +452,64 @@ public class App extends Application {
         threeM8101.title = "3М-8101";
         threeM8101.classOfDefend = "FFP 1";
         threeM8101.clapan = "Нет";
-        threeM8101.construction = "Складной";
-        threeM8101.imageResource = R.drawable.spiro101;
-        threeM8101.description = utils.RESP_SPIRO_101;
+        threeM8101.construction = "Формованный";
+        threeM8101.imageResource = R.drawable.tm8101;
+        threeM8101.description = utils.RESP_TM_8101;
         respiratorsDao.insert(threeM8101);
+
+        Respirators threeM8102 = new Respirators();
+        threeM8102.title = "3М-8102";
+        threeM8102.classOfDefend = "FFP 2";
+        threeM8102.clapan = "Нет";
+        threeM8102.construction = "Формованный";
+        threeM8102.imageResource = R.drawable.tm8102;
+        threeM8102.description = utils.RESP_TM_8102;
+        respiratorsDao.insert(threeM8102);
+
+        Respirators threeM8112 = new Respirators();
+        threeM8112.title = "3М-8112";
+        threeM8112.classOfDefend = "FFP 1";
+        threeM8112.clapan = "Да";
+        threeM8112.construction = "Формованный";
+        threeM8112.imageResource = R.drawable.tm8112;
+        threeM8112.description = utils.RESP_TM_8112;
+        respiratorsDao.insert(threeM8112);
+
+        Respirators threeM8122 = new Respirators();
+        threeM8122.title = "3М-8122";
+        threeM8122.classOfDefend = "FFP 2";
+        threeM8122.clapan = "Да";
+        threeM8122.construction = "Формованный";
+        threeM8122.imageResource = R.drawable.tm8122;
+        threeM8122.description = utils.RESP_TM_8122;
+        respiratorsDao.insert(threeM8122);
+
+        Respirators threeM9332 = new Respirators();
+        threeM9332.title = "3М-9332";
+        threeM9332.classOfDefend = "FFP 3";
+        threeM9332.clapan = "Да";
+        threeM9332.construction = "Складной";
+        threeM9332.imageResource = R.drawable.tm9332;
+        threeM9332.description = utils.RESP_TM_9332;
+        respiratorsDao.insert(threeM9332);
+
+        Respirators threeM9922 = new Respirators();
+        threeM9922.title = "3М-9922P";
+        threeM9922.classOfDefend = "FFP 2";
+        threeM9922.clapan = "Да";
+        threeM9922.construction = "Формованный";
+        threeM9922.imageResource = R.drawable.tm9922;
+        threeM9922.description = utils.RESP_TM_9922;
+        respiratorsDao.insert(threeM9922);
+
+        Respirators threeM9914 = new Respirators();
+        threeM9914.title = "3М-9914";
+        threeM9914.classOfDefend = "FFP 1";
+        threeM9914.clapan = "Да";
+        threeM9914.construction = "Неформованный";
+        threeM9914.imageResource = R.drawable.tm9914;
+        threeM9914.description = utils.RESP_TM_9914;
+        respiratorsDao.insert(threeM9914);
 
 
     }
