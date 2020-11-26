@@ -45,7 +45,7 @@ public class SplashScreen extends AppCompatActivity {
         secretTextView.show();
 
         secretTextView2 = findViewById(R.id.firstDynamic2);
-        secretTextView2.setDuration(3000);
+        secretTextView2.setDuration(2300);
         secretTextView2.setIsVisible(true);
         secretTextView2.show();
 

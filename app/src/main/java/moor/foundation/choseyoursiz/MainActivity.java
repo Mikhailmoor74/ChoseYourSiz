@@ -3,10 +3,13 @@ package moor.foundation.choseyoursiz;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -42,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     Button notFormButton;
 
     Dialog dialog;
+
 
     private AdView mAdView;
 
@@ -168,11 +172,18 @@ public class MainActivity extends AppCompatActivity {
         dialog = new Dialog(MainActivity.this);
         dialog.setTitle("Привет");
         dialog.setContentView(R.layout.dialog);
+        dialog.setCancelable(true);
         Utils utils = new Utils();
 
         TextView textView = dialog.findViewById(R.id.dialogTextTextView);
         String dialogText = utils.DIALOG_DESCRIPTION;
         textView.setText(dialogText);
+        dialog.getCurrentFocus();
+
+        dialog.dismiss();
+
+
+
 
 
 
@@ -195,5 +206,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void startDialog(View view) {
         dialog.show();
+    }
+
+    public void cancelDialog(View view) {
+        dialog.dismiss();
     }
 }
